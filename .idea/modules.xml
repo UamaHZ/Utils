@@ -3,11 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Utils.iml" filepath="$PROJECT_DIR$/Utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Utils.iml" filepath="$PROJECT_DIR$/.idea/Utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Utils.iml" filepath="$PROJECT_DIR$/Utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uamautils/uamautils.iml" filepath="$PROJECT_DIR$/uamautils/uamautils.iml" />
       <module fileurl="file://$PROJECT_DIR$/uamautils/uamautils.iml" filepath="$PROJECT_DIR$/uamautils/uamautils.iml" />
     </modules>
   </component>
