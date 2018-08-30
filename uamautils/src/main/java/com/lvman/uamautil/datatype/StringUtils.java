@@ -1,6 +1,8 @@
 package com.lvman.uamautil.datatype;
 
+import android.graphics.Paint;
 import android.text.TextUtils;
+import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
@@ -10,6 +12,14 @@ import java.text.DecimalFormat;
  * Tel: 15050261230
  */
 public class StringUtils {
+
+    /**
+     * 字符转换
+     *
+     */
+    public static String newString(String source) {
+        return TextUtils.isEmpty(source) ? "" : source;
+    }
 
     /**
      * 拼接字符串
@@ -43,5 +53,36 @@ public class StringUtils {
         }
         DecimalFormat df = new DecimalFormat("######0.00");
         return df.format(dou);
+    }
+
+    /**
+     * 字符串 转整形
+     *
+     * @param data 字符串
+     * @return 整形
+     */
+    public static int StringToInt(String data) {
+        int result;
+        try {
+            result = Integer.parseInt(data.trim());
+        } catch (Exception e) {
+            return 0;
+        }
+        return result;
+    }
+
+    //在TextView设置中划线
+    public static void setMiddleFlag(TextView textView) {
+        textView.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG); // 设置中划线并加清晰
+    }
+
+    //在TextView设置下划线
+    public static void setBottomFlag(TextView textView) {
+        textView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); // 设置下划线并加清晰
+    }
+
+    //取消中划线
+    public static void cancelMiddleFlag(TextView textView) {
+        textView.getPaint().setFlags(0);  // 取消设置的的划线
     }
 }
