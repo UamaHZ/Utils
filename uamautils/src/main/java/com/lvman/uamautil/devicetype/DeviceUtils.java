@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.os.Build;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.inputmethod.InputMethodManager;
@@ -117,4 +119,9 @@ public class DeviceUtils {
         }
     }
 
+    //获取设备id
+    public static String getDeviceId(Context context) {
+        String androidID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        return androidID.concat(Build.SERIAL);
+    }
 }
