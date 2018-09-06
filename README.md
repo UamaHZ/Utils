@@ -1,6 +1,4 @@
-# Utils
-**工具类**
-[![](https://jitpack.io/v/UamaHZ/Utils.svg)](https://jitpack.io/#UamaHZ/Utils)
+# Utils [![](https://jitpack.io/v/UamaHZ/Utils.svg)](https://jitpack.io/#UamaHZ/Utils)
 
 ## [apptype/AppUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/apptype/AppUtils.java)
 > `getAppVersionCode(Context context)`获取app code 号
