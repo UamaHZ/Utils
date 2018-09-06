@@ -2,7 +2,7 @@
 **工具类**
 [![](https://jitpack.io/v/UamaHZ/Utils.svg)](https://jitpack.io/#UamaHZ/Utils)
 
-## apptype/**AppUtils** [快速链接](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/apptype/AppUtils.java)
+## apptype/[**AppUtils**](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/apptype/AppUtils.java)
 * `getAppVersionCode(Context context)`： 获取app code 号
 * `getVersionName(Context context)`： 获取app name 号(用户看到的版本号）
 
