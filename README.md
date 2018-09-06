@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/UamaHZ/Utils.svg)](https://jitpack.io/#UamaHZ/Utils)
 
 ## [apptype/AppUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/apptype/AppUtils.java)
-### * `getAppVersionCode(Context context)`： 获取app code 号
+ * ### `getAppVersionCode(Context context)`： 获取app code 号 *
 ### * `getVersionName(Context context)`： 获取app name 号(用户看到的版本号）
 
 ## [arraytype/ListUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/arraytype/ListUtils.java)
