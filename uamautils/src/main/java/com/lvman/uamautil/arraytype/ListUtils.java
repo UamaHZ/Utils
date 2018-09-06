@@ -28,4 +28,5 @@ public class ListUtils {
     public static boolean isEmpty(List list) {
         return !hasData(list);
     }
+
 }
