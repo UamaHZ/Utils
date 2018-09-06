@@ -18,6 +18,9 @@
 ### * `getFromAssets(Context c, String fileName)`: 从assets中获取Json字符串
 
 ## [datatype/CalculateUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/datatype/CalculateUtils.java)
-### * `add(double v1, double v2`: > 精确的加法运算
-### * `sub(double v1,double v2)`: > 精确的减法运算
-### * `mul(double v1,double v2)`: > 精确的乘法运算
+### * `add(double v1, double v2`: 
+   > 精确的加法运算
+### * `sub(double v1,double v2)`: 
+   > 精确的减法运算
+### * `mul(double v1,double v2)`: 
+   > 精确的乘法运算
