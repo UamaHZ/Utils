@@ -71,6 +71,20 @@ public class StringUtils {
         return result;
     }
 
+    /**
+     * 处理double类型，取整
+     *
+     * @param dou 传入的double值
+     * @return 整型字符串
+     */
+    public static String doubleToIntegerString(Double dou) {
+        if (dou == null) {
+            return "";
+        }
+        DecimalFormat df = new DecimalFormat("######0");
+        return df.format(dou);
+    }
+
     //在TextView设置中划线
     public static void setMiddleFlag(TextView textView) {
         textView.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG); // 设置中划线并加清晰

@@ -69,6 +69,8 @@
 
 > `cancelMiddleFlag(TextView textView)`: 取消中划线
 
+> `doubleToIntegerString(Double dou)`: 处理double类型，取整
+
 
 
 ## [datatype/UrlUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/datatype/UrlUtils.java)
