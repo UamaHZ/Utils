@@ -172,6 +172,8 @@
 
 > `checkPhoneStatePermission(final Context context, final String rejectTip,@NonNull final SuccessListener successListener)`: 读取手机状态的权限
 
+> `checkPhoneStatePermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener)`: 判断手机定位权限
+
 > `checkPermission(final Context context, final String rejectTip, final SuccessListener successListener, @NonNull String... permission)`: 通用的权限检查方式
 
 > `checkPermission(final Context context, final SuccessOrFailListener successListener, String... permission)`: 通用的权限检查方式 带拒绝权限的返回监听

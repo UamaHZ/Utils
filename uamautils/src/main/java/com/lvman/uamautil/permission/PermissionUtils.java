@@ -28,7 +28,7 @@ public class PermissionUtils {
      * @param rejectTip       拒绝后的提示
      * @param successListener 授权监听
      */
-    public static void checkCameraPermission(final Context context, final String rejectTip,@NonNull final SuccessListener successListener) {
+    public static void checkCameraPermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
         AndPermission.with(context)
                 .runtime()
                 .permission(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -79,14 +79,42 @@ public class PermissionUtils {
     }
 
 
-    //读取手机状态的权限
-
     /**
+     * 判断手机定位权限
+     *
      * @param context         context
      * @param rejectTip       拒绝后的提示
      * @param successListener 授权监听
      */
-    public static void checkPhoneStatePermission(final Context context, final String rejectTip,@NonNull final SuccessListener successListener) {
+    public static void checkPhoneStatePermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
+        AndPermission.with(context)
+                .runtime()
+                .permission(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
+                .onGranted(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> data) {
+                        if (successListener != null && AndPermission.hasAlwaysDeniedPermission(context, data)) {
+                            successListener.success();
+                        }
+                    }
+                })
+                .onDenied(new Action<List<String>>() {
+                    @Override
+                    public void onAction(List<String> data) {
+                        rejectPermissionTip(context, TextUtils.isEmpty(rejectTip) ? context.getString(R.string.uama_util_no_location_permission) : rejectTip);
+                    }
+                })
+                .start();
+    }
+
+    /**
+     * 读取手机状态的权限
+     *
+     * @param context         context
+     * @param rejectTip       拒绝后的提示
+     * @param successListener 授权监听
+     */
+    public static void checkLocationPermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
         AndPermission.with(context)
                 .runtime()
                 .permission(Manifest.permission.READ_PHONE_STATE)
@@ -106,7 +134,6 @@ public class PermissionUtils {
                 })
                 .start();
     }
-
     /**
      * 通用的权限检查方式
      *

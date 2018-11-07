@@ -3,7 +3,8 @@
     <string name="uama_util_cancel">取消</string>
     <string name="uama_util_confirm">确定</string>
     <string name="uama_util_setting_permission">去设置</string>
-    <string name="uama_util_no_camera_and_storage_permission">无法使用相机功能，请检查是否已打开相机和存储权限。</string>
+    <string name="uama_util_no_camera_and_storage_permission">无法使用相机功能，请检查是否已打开相机和存储权限！</string>
     <string name="uama_util_read_status_permission_is_need">请开启手机存储权限，不开启将无法正常工作！</string>
-    <string name="uama_util_no_read_phone_permission">无法读取手机信息，请检查是否已经打开拨打电话权限。</string>
+    <string name="uama_util_no_read_phone_permission">无法读取手机信息，请检查是否已经打开拨打电话权限！</string>
+    <string name="uama_util_no_location_permission">请开启定位权限，不开启将无法正常工作！</string>
 </resources>
