@@ -99,6 +99,8 @@
 
 > `isNetworkAvailable(Context context)`: 检查网络是否连通
 
+> `getDeviceUniqueId(Context context)`: 获取设备唯一id标识
+
 
 
 ## [devicetype/ImageUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/devicetype/ImageUtils.java)
@@ -160,4 +162,17 @@
 > `sp2px(Context context, float spVal)`: sp转px
 
 > `px2sp(Context context, float pxVal)`: px转sp
+
+
+
+## [permission/PermissionUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/permission/PermissionUtils.java)
+> `checkCameraPermission(final Context context, final String rejectTip,@NonNull final SuccessListener successListener)`: 单独相机权限判断（包含存储权限）
+
+> `checkExternalPermission(final Context context, final String rejectTip, final SuccessListener successListener)`: 单独存储权限检查
+
+> `checkPhoneStatePermission(final Context context, final String rejectTip,@NonNull final SuccessListener successListener)`: 读取手机状态的权限
+
+> `checkPermission(final Context context, final String rejectTip, final SuccessListener successListener, @NonNull String... permission)`: 通用的权限检查方式
+
+> `checkPermission(final Context context, final SuccessOrFailListener successListener, String... permission)`: 通用的权限检查方式 带拒绝权限的返回监听
 
