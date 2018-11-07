@@ -86,7 +86,7 @@ public class PermissionUtils {
      * @param rejectTip       拒绝后的提示
      * @param successListener 授权监听
      */
-    public static void checkPhoneStatePermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
+    public static void checkLocationPermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
         AndPermission.with(context)
                 .runtime()
                 .permission(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -114,7 +114,7 @@ public class PermissionUtils {
      * @param rejectTip       拒绝后的提示
      * @param successListener 授权监听
      */
-    public static void checkLocationPermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
+    public static void checkPhoneStatePermission(final Context context, final String rejectTip, @NonNull final SuccessListener successListener) {
         AndPermission.with(context)
                 .runtime()
                 .permission(Manifest.permission.READ_PHONE_STATE)
