@@ -11,10 +11,15 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
+import com.lvman.uamautil.datatype.StringUtils;
+
+import java.util.UUID;
 
 /**
  * Created by GuJiaJia on 2018/8/3.
@@ -123,8 +128,7 @@ public class DeviceUtils {
 
     //获取设备id
     public static String getDeviceId(Context context) {
-        String androidID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-        return androidID.concat(Build.SERIAL);
+       return getDeviceUniqueId(context);
     }
 
     /**
@@ -145,5 +149,35 @@ public class DeviceUtils {
             }
         }
         return false;
+    }
+
+    //获取设备唯一id标识
+    public static String getDeviceUniqueId(Context context){
+        String serial = null;
+        String m_szDevIDShort = "35" +
+                Build.BOARD.length()%10+ Build.BRAND.length()%10 +
+
+                Build.CPU_ABI.length()%10 + Build.DEVICE.length()%10 +
+
+                Build.DISPLAY.length()%10 + Build.HOST.length()%10 +
+
+                Build.ID.length()%10 + Build.MANUFACTURER.length()%10 +
+
+                Build.MODEL.length()%10 + Build.PRODUCT.length()%10 +
+
+                Build.TAGS.length()%10 + Build.TYPE.length()%10 +
+
+                Build.USER.length()%10 ; //13 位
+
+        try {
+            serial = Build.SERIAL;
+            //API>=9 使用serial号
+            return new UUID(m_szDevIDShort.hashCode(), serial.hashCode()).toString();
+        } catch (Exception exception) {
+            //serial需要一个初始化
+            serial = "serial"; // 随便一个初始化
+        }
+        //使用硬件信息拼凑出来的15位号码
+        return new UUID(m_szDevIDShort.hashCode(), serial.hashCode()).toString();
     }
 }

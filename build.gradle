@@ -36,4 +36,5 @@ ext {
     minSdkVersion = 17
     targetSdkVersion = 23
     supportLibraryVersion = "26.1.0"
+    andPermissionVersion='2.0.0-rc12'
 }
