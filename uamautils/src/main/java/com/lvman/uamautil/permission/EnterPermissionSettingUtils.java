@@ -13,8 +13,9 @@ import android.util.Log;
  */
 public class EnterPermissionSettingUtils {
 
-    public static void enterPermissionSettingPage(Context context){
-        gotoMIUIPermission(context);
+    public static void enterPermissionSettingPage(Context context) {
+//        gotoMIUIPermission(context);
+        gotoAppDetailSettingIntent(context);
     }
 
 
@@ -66,7 +67,6 @@ public class EnterPermissionSettingUtils {
 
     /**
      * 魅族权限管理页面
-     *
      */
     private static void gotoMeiZuPermission(Context context) {
         Intent intent = new Intent("com.meizu.safe.security.SHOW_APPSEC");

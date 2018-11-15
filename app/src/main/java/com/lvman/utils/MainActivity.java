@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.lvman.uamautil.devicetype.DeviceUtils;
 import com.lvman.uamautil.listener.SuccessListener;
+import com.lvman.uamautil.permission.EnterPermissionSettingUtils;
 import com.lvman.uamautil.permission.PermissionUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +22,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PermissionUtils.checkPhoneStatePermission(MainActivity.this, "", new SuccessListener() {
-                    @Override
-                    public void success() {
-                        textView.setText("UniqueId: ".concat(DeviceUtils.getDeviceUniqueId(MainActivity.this)));
-                    }
-                });
+//                PermissionUtils.checkPhoneStatePermission(MainActivity.this, "", new SuccessListener() {
+//                    @Override
+//                    public void success() {
+//                        textView.setText("UniqueId: ".concat(DeviceUtils.getDeviceUniqueId(MainActivity.this)));
+                        EnterPermissionSettingUtils.enterPermissionSettingPage(MainActivity.this);
+//                    }
+//                });
             }
         });
     }
