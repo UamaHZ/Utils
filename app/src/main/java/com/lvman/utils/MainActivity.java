@@ -10,6 +10,7 @@ import com.lvman.uamautil.devicetype.DeviceUtils;
 import com.lvman.uamautil.listener.SuccessListener;
 import com.lvman.uamautil.permission.EnterPermissionSettingUtils;
 import com.lvman.uamautil.permission.PermissionUtils;
+import com.lvman.uamautil.timetype.DateUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 //                    @Override
 //                    public void success() {
 //                        textView.setText("UniqueId: ".concat(DeviceUtils.getDeviceUniqueId(MainActivity.this)));
-                        EnterPermissionSettingUtils.enterPermissionSettingPage(MainActivity.this);
+                textView.setText(DateUtils.strDateFormat("1-11 14:16","MM-dd HH:mm","yyyy年MM月dd日 HH时mm分"));
 //                    }
 //                });
             }

@@ -132,6 +132,12 @@
 
 > `longTimeToString(long time,String patternType)`: 时间磋转String
 
+> `strToCalendar(String dateStr, String dateType)`: 字符串转Calendar
+
+> `stringToDateStamp(String str, String type)`: 字符串时间获取时间戳
+
+> `numberAddZero(int number)`: 数字小于10的前面加上0.类似 5->05
+
 
 
 ## [timetype/TimeUtils](https://github.com/UamaHZ/Utils/blob/master/uamautils/src/main/java/com/lvman/uamautil/timetype/TimeUtils.java)
