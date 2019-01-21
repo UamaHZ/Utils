@@ -93,7 +93,7 @@ public class DateUtils {
     }
 
     /**
-     * 数字小于10的前面加上0.类似 5->05
+     * 数字小于10的前面加上0.类似 5转换成05
      * @param number 数字
      * @return result
      */
