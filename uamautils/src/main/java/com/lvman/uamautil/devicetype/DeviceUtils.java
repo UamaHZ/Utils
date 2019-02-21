@@ -180,4 +180,9 @@ public class DeviceUtils {
         //使用硬件信息拼凑出来的15位号码
         return new UUID(m_szDevIDShort.hashCode(), serial.hashCode()).toString();
     }
+
+    public static float getDensity(Context cx) {
+        DisplayMetrics dm = cx.getApplicationContext().getResources().getDisplayMetrics();
+        return dm.density;
+    }
 }
