@@ -3,14 +3,10 @@ package com.lvman.utils;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.lvman.uamautil.devicetype.DeviceUtils;
-import com.lvman.uamautil.listener.SuccessListener;
-import com.lvman.uamautil.permission.EnterPermissionSettingUtils;
-import com.lvman.uamautil.permission.PermissionUtils;
-import com.lvman.uamautil.timetype.DateUtils;
+import com.lvman.uamautil.common.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,13 +19,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                PermissionUtils.checkPhoneStatePermission(MainActivity.this, "", new SuccessListener() {
-//                    @Override
-//                    public void success() {
-//                        textView.setText("UniqueId: ".concat(DeviceUtils.getDeviceUniqueId(MainActivity.this)));
-                textView.setText(DateUtils.strDateFormat("1-11 14:16","MM-dd HH:mm","yyyy年MM月dd日 HH时mm分"));
-//                    }
-//                });
+                ToastUtil.show(MainActivity.this,"什么时候解决");
+//                ToastUtil.show(MainActivity.this,"hh");
             }
         });
     }
