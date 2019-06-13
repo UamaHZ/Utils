@@ -9,18 +9,26 @@ import android.widget.Toast;
  */
 public class ToastUtil {
 
+    private static Toast toast;
+
+    public static void cancel() {
+        if (toast != null) {
+            toast.cancel();
+        }
+    }
 
     public static void show(Context context, String info) {
-//        if (info == null || info.trim().length() < 1) {
-//            return;
-//        }
-//        if (null == toast) {
-//            toast = Toast.makeText(context.getApplicationContext(), info, Toast.LENGTH_SHORT);
-//        } else {
-//            toast.setText(info);
-//        }
-//        toast.show();
-		Toast.makeText(context, info, Toast.LENGTH_SHORT).show();
+        toast = null;
+        if (info == null || info.trim().length() < 1) {
+            return;
+        }
+        if (null == toast) {
+            toast = Toast.makeText(context.getApplicationContext(), info, Toast.LENGTH_SHORT);
+        } else {
+            toast.setText(info);
+        }
+        toast.show();
+//		Toast.makeText(context, info, Toast.LENGTH_SHORT).show();
     }
 
     public static void show(Context context, @StringRes int info) {

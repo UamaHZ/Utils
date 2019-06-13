@@ -31,6 +31,9 @@ dependencies {
     implementation("com.yanzhenjie:permission:$rootProject.andPermissionVersion") {
         exclude group: 'com.android.support'
     }
+    api ('com.hikvision.ezviz:ezviz-sdk:4.8.4'){
+        exclude group: 'com.android.support'
+    }
 }
 apply plugin: 'com.github.dcendents.android-maven'
 repositories {
